@@ -20,4 +20,8 @@ public class ProdutoService {
 	public Produto save(Produto entity) {
 		return repository.save(entity);
 	}
+	
+	public Produto findProdutoById(Long id) {
+		return repository.findById(id).get();
+	}
 }
