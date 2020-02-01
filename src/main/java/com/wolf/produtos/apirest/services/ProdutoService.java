@@ -16,4 +16,8 @@ public class ProdutoService {
 	public List<Produto> findAll() {
 		return repository.findAll();
 	}
+	
+	public Produto save(Produto entity) {
+		return repository.save(entity);
+	}
 }

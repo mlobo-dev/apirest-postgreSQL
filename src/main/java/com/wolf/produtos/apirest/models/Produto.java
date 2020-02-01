@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Produto {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String nome;
 	private BigDecimal quantidade;
