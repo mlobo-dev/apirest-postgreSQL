@@ -26,6 +26,7 @@ public class SwaggerConfig {
 				.apiInfo(metaInfo());
 	}
 
+	@SuppressWarnings("rawtypes")
 	private ApiInfo metaInfo() {
 
 		ApiInfo apiInfo = new ApiInfo("Produtos API REST", "API REST de cadastro de produtos.", "1.0",
