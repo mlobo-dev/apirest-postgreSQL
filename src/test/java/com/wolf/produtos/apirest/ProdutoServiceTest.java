@@ -20,14 +20,17 @@ public class ProdutoServiceTest {
 	@Test
 	@Rollback
 	public void createShouldPersistData() {
-		Produto p = new Produto(2L, "beterraba", new BigDecimal(2), new BigDecimal(56));
+		Produto p = new Produto(2L, "beterraba doce", new BigDecimal(2), new BigDecimal(56));
 
 		service.save(p);
 		Assertions.assertThat(p.getId()).isNotNull();
-		Assertions.assertThat(p.getNome()).isEqualTo("beterraba");
+		Assertions.assertThat(p.getNome()).isEqualTo("beterraba doce");
 		Assertions.assertThat(p.getQuantidade()).isEqualTo(new BigDecimal(2));
 		Assertions.assertThat(p.getValor()).isEqualTo(new BigDecimal(56));
-
+		
+		Produto p2 = service.find(11L);
+		service.delete(p2);
+		
 	}
 
 }
